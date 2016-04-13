@@ -8,3 +8,13 @@ Organização e Arquitetura de Computadores
     <li>sub</li>
     <li><strike>subi</strike> (não existe, utiliza addi, com um parametro negativo)</li>
 </ul>
+
+###Operações lógicas
+<table>
+<tr><th>Operação</th><th>Operador C / Java</th><th>Instrução MIPS</th></tr>
+<tr><td>Binary Shift Left</td><td align="center"> << </td><td>sll</td></tr>
+<tr><td>Binary Shift Right</td><td align="center"> >> </td><td>srl</td></tr>
+<tr><td>Bit-by-bit AND </td><td align="center"> & </td><td>and, andi</td></tr>
+<tr><td>Bit-by-bit OR</td><td align="center"> | </td><td>or,ori</td></tr>
+<tr><td>Bit-by-bit NOT</td><td align="center"> ~ </td><td>nor</td></tr>
+</table>
