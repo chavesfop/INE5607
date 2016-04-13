@@ -1,0 +1,16 @@
+# x = ((x+300)-y)+z+27+x
+# x=$s0, y=$s1, z=$s2
+
+## adicionado t0 no codigo, uma variavel temporaria $t0.
+addi $t0,$s0,300
+sub $t0,$t0,$s1
+add $t0,$t0,$s2
+addi $t0,$t0,27
+add $t0,$t0,$s0
+
+## otimizando (1 instrução a menos e sem uso de $t0)
+add  $s0,$s0,$s0  #x=x+x
+sub  $s0,$s0,$s1  #x=x-y
+add  $s0,$s0,$s2  #x=x+z
+addi $s0,$s0,327  #x=x+327
+
