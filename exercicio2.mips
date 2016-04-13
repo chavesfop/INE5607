@@ -1,0 +1,10 @@
+# s = (a & b) | (!a & c)
+# s = $s0
+# a = $a0
+# b = $a1
+# c = $a2
+
+and $s0,$a0,$a1    # s = a & b, agora s = (a & b)
+nor $a0,$a0,$zero  # a = !a   , agora a = (!a)
+and $a0,$a0,$a2    # a = a & c, agora a = (!a & c)
+or  $s0,$s0,$a2    # s = s | a, agora s = (a & b) | (!a & c)
