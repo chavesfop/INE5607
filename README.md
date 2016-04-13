@@ -24,10 +24,10 @@ Organização e Arquitetura de Computadores
 </table>
 
 ###Carregamento de constantes
-Constantes no MIPS, tem no máximo 16bits, portanto para
+Constantes no MIPS, tem no máximo 16bits, portanto para<br />
 
-32bits:
-#Desejamos carregar por exemplo: 0xFFFFAAAA (1111 1111 1111 1111 1010 1010 1010 1010)
-ori $t0,$zero,0xFFFF                        (0000 0000 0000 0000 1111 1111 1111 1111) 0x0000FFFF
-sll $s0,$t0,16                              (1111 1111 1111 1111 0000 0000 0000 0000) 0xFFFF0000
-ori $s0,$s0,0xAAAA                          (1111 1111 1111 1111 1010 1010 1010 1010) 0xFFFFAAAA
+32bits:<br />
+Desejamos carregar por exemplo: 0xFFFFAAAA (1111 1111 1111 1111 1010 1010 1010 1010)<br />
+ori $t0,$zero,0xFFFF                        (0000 0000 0000 0000 1111 1111 1111 1111) 0x0000FFFF<br />
+sll $s0,$t0,16                              (1111 1111 1111 1111 0000 0000 0000 0000) 0xFFFF0000<br />
+ori $s0,$s0,0xAAAA                          (1111 1111 1111 1111 1010 1010 1010 1010) 0xFFFFAAAA<br />
