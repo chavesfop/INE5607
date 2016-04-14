@@ -28,9 +28,9 @@ Constantes no MIPS, tem no máximo 16bits, portanto para<br />
 
 32bits:<br />
 <table>
-<tr><th colspan="3">Desejamos carregar por exemplo: 0xFFFFAAAA (1111 1111 1111 1111 1010 1010 1010 1010)</th></tr>
-<tr><td>ori</td><td>$t0,$zero,0xFFFF</td>(0000 0000 0000 0000 1111 1111 1111 1111) 0x0000FFFF<td></td></tr>
-<tr><td>sll</td><td>$s0,$t0,16</td>(1111 1111 1111 1111 0000 0000 0000 0000) 0xFFFF0000<td></td></tr>
-<tr><td>ori</td><td>s0,$s0,0xAAAA</td>(1111 1111 1111 1111 1010 1010 1010 1010) 0xFFFFAAAA<td></td></tr>
+<tr><th colspan="3">Desejamos carregar por exemplo: 0xFFFFAAAA</th></tr>
+<tr><td>ori</td><td>$t0,$zero,0xFFFF</td>0x0000FFFF<td></td></tr>
+<tr><td>sll</td><td>$s0,$t0,16</td>0xFFFF0000<td></td></tr>
+<tr><td>ori</td><td>s0,$s0,0xAAAA</td>0xFFFFAAAA<td></td></tr>
 </table>
 
