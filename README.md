@@ -51,7 +51,7 @@ agora quando referenciado label, sabemos que vai pra parte do processamento que 
 #####Desvios
 A label deve estar em até 2^16 instruções para continuar sendo identificada, pois as instruções ocupam 16 bits.
 
-######Desvio condicional
+######Desvios condicionais
 <p>
 beq: branch on equal<br />
 beq $s0, $s1, Igual <i>#Se $s0==$s1, desvie para o endereço do label Igual</i>
@@ -61,9 +61,17 @@ bne: branch on not equal<br />
 bne $s0, $s1, Diferente <i>#Se $s0!=$s1, desvie para o endereço do label Diferente</i>
 </p>
 
-######Desvio incondicional<br />
+######Desvios incondicionais<br />
 <p>
 j (Jump)<br />
 j Fim # Desvie para o endereço do label Fim<br />
 O jump deve estar em uma instrução a 2^26, pois a operação ocupa 6 bits.
 </p>
+
+<p>jal (Jump and Link)<br />
+Salva o endereço atual em $ra e desvie.<br />
+Suporte para chamadas de procedimentos.</p>
+
+<p>jr (Jump Register)<br />
+Desvie para o endereço no registrador X.<br />
+Suporte para retorno de procesimentos.</p>
