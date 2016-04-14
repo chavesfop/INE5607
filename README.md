@@ -34,3 +34,29 @@ Constantes no MIPS, tem no máximo 16bits, portanto para<br />
 <tr><td>ori</td><td>s0,$s0,0xAAAA</td><td>0xFFFFAAAA</td></tr>
 </table>
 
+###Instruções de tomada de decisão if-then-else
+<ul>
+<li>Desvios</li>
+<li>If-then-else</li>
+<li>Comparadores</li>
+<li>Switch</li>
+</ul>
+
+#####Rótulos / Labels
+Apontam um endereço de memória por um nome especificado.<br />
+<b>label</b>: add $s1,$s2,$s0<br /><br />
+agora quando referenciado label, sabemos que vai pra parte do processamento que tem <b>label</b>: no início
+
+#####Desvios
+######Desvio condicional<br />
+<p>
+beq: branch on equal<br />
+beq $s0, $s1, Igual <i>#Se $s0==$s1, desvie para o endereço do label Igual</i><br />
+</p>
+<p>
+bne: branch on not equal<br />
+bne $s0, $s1, Diferente <i>#Se $s0!=$s1, desvie para o endereço do label Diferente</i><br />
+</p>
+
+######Desvio incondicional<br />
+
