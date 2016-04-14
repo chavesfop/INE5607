@@ -43,20 +43,27 @@ Constantes no MIPS, tem no máximo 16bits, portanto para<br />
 </ul>
 
 #####Rótulos / Labels
-Apontam um endereço de memória por um nome especificado.<br />
-<b>label</b>: add $s1,$s2,$s0<br /><br />
-agora quando referenciado label, sabemos que vai pra parte do processamento que tem <b>label</b>: no início
+<p>Apontam um endereço de memória por um nome especificado.<br />
+<b>label</b>: add $s1,$s2,$s0<br />
+agora quando referenciado label, sabemos que vai pra parte do processamento que tem <b>label</b>: no início.</p>
+
 
 #####Desvios
+<p>A label deve estar em até 2^16 instruções para continuar sendo identificada, pois as instruções ocupam 16 bits.</p>
+
 ######Desvio condicional<br />
 <p>
 beq: branch on equal<br />
-beq $s0, $s1, Igual <i>#Se $s0==$s1, desvie para o endereço do label Igual</i><br />
+beq $s0, $s1, Igual <i>#Se $s0==$s1, desvie para o endereço do label Igual</i>
 </p>
 <p>
 bne: branch on not equal<br />
-bne $s0, $s1, Diferente <i>#Se $s0!=$s1, desvie para o endereço do label Diferente</i><br />
+bne $s0, $s1, Diferente <i>#Se $s0!=$s1, desvie para o endereço do label Diferente</i>
 </p>
 
 ######Desvio incondicional<br />
-
+<p>
+j (Jump)<br />
+j Fim # Desvie para o endereço do label Fim<br />
+O jump deve estar em uma instrução a 2^26, pois a operação ocupa 6 bits.
+</p>
