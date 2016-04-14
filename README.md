@@ -75,3 +75,27 @@ Suporte para chamadas de procedimentos.</p>
 <p>jr (Jump Register)<br />
 Desvie para o endereço no registrador X.<br />
 Suporte para retorno de procesimentos.</p>
+
+#####Comparadores
+<p>
+sit (Set if less than)<br />
+
+portanto pra representar: if (a<b){c=a;}else{c=b;}, temos:<br />
+sit $t0,$s1,$s2<br />
+beq $t0,$zero,else<br />
+add $s0,$zero,$s1<br />
+j exit<br />
+else:add $s0, $zero, $s2<br />
+exit: #... restante das instruções.
+</p>
+<p>
+siti (Set if less than imediate)<br />
+
+portanto pra representar: if (a<10){c=a;}else{c=10;}, temos:<br />
+siti $t0,$s1,10<br />
+beq $t0,$zero,else<br />
+add $s0,$zero,$s1<br />
+j exit<br />
+else:addi $s0, $zero, 10<br />
+exit: #... restante das instruções.
+</p>
