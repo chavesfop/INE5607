@@ -1,0 +1,16 @@
+if (i==j) { f = g + h } else { f = g - h}
+//sendo {f,g,h,i,j} = {$s0,$s1,$s2,$s3,$s4,$s5}
+
+beq $s3,$s4 then
+sub $s0,$s1,$s2
+j exit
+then: add $s0,$s1,$s2
+exit: #...restante das instruções, fim do if.
+
+###OU####
+
+beq $s3,$s4 else
+add $s0,$s1,$s2
+j exit
+else: sub $s0,$s1,$s2
+exit: #...restante das instruções, fim do if
